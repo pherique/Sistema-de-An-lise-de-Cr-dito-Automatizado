@@ -23,13 +23,13 @@ def analisador(caminho_csv):
       dados = simular_dados_clientes(cpf)  #chama a função simular_dados_cliente passando o CPF, que 
       risco = avliar_credito(dados)  #chama a função avliar_credito passando os dados do cliente, que retorna o risco associado ao CPF.
       
-    resultados.append({
-    'CPF': cpf,  # adiciona um dicionário com o CPF e o risco à lista de resultado
-    'Risco': dados.get('cfp'),  # adiciona o risco associado ao CPF
-    'Score': dados.get('score'),  # adiciona o score do cliente, se disponível
-    'Dividas': dados.get('dividas'),  # adiciona as dívidas do cliente, se disponível
-    'Rendas': dados.get('rendas')  # adiciona as rendas do cliente, se disponível
-})  # adiciona um dicionário com os resultados da análise à lista de resultados 
+        resultados.append({
+        'CPF': cpf,  # adiciona um dicionário com o CPF e o risco à lista de resultado
+        'Risco': dados.get('cfp'),  # adiciona o risco associado ao CPF
+        'Score': dados.get('score'),  # adiciona o score do cliente, se disponível
+        'Dividas': dados.get('dividas'),  # adiciona as dívidas do cliente, se disponível
+        'Rendas': dados.get('rendas')  # adiciona as rendas do cliente, se disponível
+        })  # adiciona um dicionário com os resultados da análise à lista de resultados 
       
       # 3. Converter os resultados em um DataFrame
     df_resultado = pd.DataFrame(resultados)  #converte a lista de resultados em um DataFrame do Pandas.
